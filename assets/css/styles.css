@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+header {
+    background: #50b3a2;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.name-photo-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.name-title-group {
+    display: flex;
+    flex-direction: column;  
+    align-items: start;  
+    gap: 5px;  
+}
+
+.name-photo-group img {
+    border-radius: 30%;
+    margin-top: 10px;
+}
+
+.name-photo-group h2 {
+    margin-top: 100px;
+    margin-bottom: 0px;
+    font-size: xx-large;
+}
+
+.name-photo-group h3 {
+    margin: 0; 
+    font-size: smaller; 
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #50b3a2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 0px; /* spacing from the name */
+    vertical-align: middle; /* align with the middle of adjacent elements */
+    transition: background-color 0.3s; /* smooth color transition on hover */
+}
+
+.cv-button:hover {
+    background-color: #3a827e; /* slightly darker shade on hover */
+}
+
+
+.about-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timeline-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.timeline-content {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.timeline-content h5 {
+    font-size: larger; /* From x-large to larger */
+    margin: 0;
+    margin-bottom: 3px;  /* Reduce the gap. It was 5px before. */
+    color: #50b3a2;
+}
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.social-links a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+
+.rights {
+    margin-top: 100px;
+}
+
+.experience, .skills {
+    width: 50%;
+    box-sizing: border-box;
+    margin-left: 20px; /* Adjust this value based on your preference */
+}
+
+
+.skills-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-style: oblique;
+}
+
+/* Media queries */
+@media (max-width: 767px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name-photo-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        display: block;
+        text-align: left;
+        margin: 5px 0;
+        padding: 10px 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .experience, .skills {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .experience {
+        padding-right: 10px;
+    }
+
+    .skills {
+        padding-left: 10px;
+    }
+
+    .skills::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    flex-wrap: wrap;  /* Added this to ensure content wraps on smaller screens */
+}
+
+/* Clearfix for floating elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
