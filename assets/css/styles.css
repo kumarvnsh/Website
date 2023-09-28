@@ -12,10 +12,12 @@ img {
 }
 
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #333;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px; /* You can adjust the padding as needed */
 }
 
 nav a {
@@ -29,6 +31,30 @@ nav a {
 
 nav a:hover {
     background-color: #555;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: center; /* This will center the links horizontally */
+    align-items: center; 
+    flex-grow: 1; /* This will make sure the navlinks expand and take as much space as available */
+}
+
+.navlinks a {
+    margin: 0 10px; /* Adjust this for spacing between links */
+    text-decoration: none;
+    color: #fff;
+}
+
+.mode-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.mode-toggle img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px; /* Space between the images */
 }
 
 header {
@@ -238,3 +264,25 @@ footer {
     display: table;
     clear: both;
 }
+
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode nav {
+    background-color: #1f1f1f;
+}
+
+.dark-mode header {
+    background-color: #2a2a2a;
+}
+
+#lightModeToggle, #darkModeToggle {
+    width: 30px;   /* Adjust this width as per your requirements */
+    height: 30px;  /* Adjust this height as per your requirements */
+    vertical-align: auto; /* to align with other nav items */
+}
+
+
