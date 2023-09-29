@@ -18,6 +18,7 @@ nav {
     background: #333;
     color: #fff;
     padding: 10px 20px; /* You can adjust the padding as needed */
+    flex-direction: wrap;
 }
 
 nav a {
@@ -52,10 +53,73 @@ nav a:hover {
 }
 
 .mode-toggle img {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px; /* Space between the images */
+    width: 2vw;
+    height: 2vw;
+    margin-left: 10px;
 }
+
+/* For larger screens, ensure a max-size */
+@media (min-width: 1025px) {
+    .mode-toggle img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Adjust for medium-large screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .mode-toggle img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Adjust for tablets and similar devices */
+@media (max-width: 768px) and (min-width: 641px) {
+    .mode-toggle img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Adjust for small devices like mobile phones */
+@media (max-width: 640px) {
+    .mode-toggle img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* Adjust for very small devices */
+@media (max-width: 480px) {
+    .mode-toggle img {
+        width: 12px;
+        height: 12px;
+        margin-left: 5px; /* Reduce margin */
+    }
+}
+
+
+@media (max-width: 400px) {
+    .mode-toggle img {
+        width: 12px;
+        height: 12px;
+        margin-left: 4px; /* further reduce margin */
+    }
+    /* Adjust navlinks font size if necessary */
+    .navlinks {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        padding: 0 5px; /* adjust as per your need */
+    }
+}
+
+
+
 
 header {
     background: #50b3a2;
@@ -251,12 +315,44 @@ header {
 
 footer {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
     background-color: #333;
-    color: #fff;
-    flex-wrap: wrap;  /* Added this to ensure content wraps on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+
+
+.footer > * {
+    max-height: 100%; 
+    overflow: auto; 
+}
+
+
+
+@media (max-width: 768px) and (min-width: 641px) {
+    .footer {
+        height: 100px; /* Or whatever height works best */
+    }
+}
+
+
+@media (max-width: 768px) and (min-width: 641px) {
+    .footer {
+        margin-top: 20px; /* Or whatever margin works best */
+        padding: 15px 0;  /* Adjust padding if needed */
+    }
+}
+
+
+
+.footer::before, .footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
 
 /* Clearfix for floating elements */
 .clearfix::after {
